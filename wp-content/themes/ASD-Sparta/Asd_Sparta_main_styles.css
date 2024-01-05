@@ -1,0 +1,673 @@
+
+body {
+	margin: 0px;
+	font-family: Times New Roman;
+}
+
+@font-face {
+    font-family: 'outrun_futurebold';
+    src: url('/wp-content/themes/ASD-Sparta/outrun__future__bold-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/ASD-Sparta/outrun__future__bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aktivgrotesk-bolditalicuploadedfile';
+    src: url('/wp-content/themes/ASD-Sparta/aktivgrotesk-bolditalic-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/ASD-Sparta/aktivgrotesk-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aktivgrotesk-bolduploadedfile';
+    src: url('/wp-content/themes/ASD-Sparta/aktivgrotesk-bold-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/ASD-Sparta/aktivgrotesk-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+	font-size: clamp(1rem, 3.5vw, 1.2rem);
+	line-height: max(3.5vw,1.3rem);
+}
+
+a {
+	color: inherit;
+	font-size: clamp(1rem, 3.5vw, 1.2rem);
+	text-decoration: none;
+}
+
+/* Header Styles */
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	line-height: .4rem;
+} 
+
+.branding, .navigation > i, .nav-list {
+	padding: .75rem;
+}
+
+.branding h1 {
+	font-family: 'outrun_futurebold', Times New Roman;
+	font-size: clamp(20px, 6vw, 50px);
+	line-height: initial;
+	margin:0px;
+}
+
+nav {
+	display: none;
+}
+
+.visible {
+	display: initial;
+}
+
+nav a {
+	font-size: clamp(8px, 3vw, 20px);
+}
+
+.nav-list {
+	font-family: 'aktivgrotesk-bolditalicuploadedfile', sans-serif;
+	font-weight: 700;
+	display: flex;
+}
+
+.nav-list li {
+	list-style-type: none;
+	padding: 0 5px;
+}
+
+.nav-list a  {
+	position: relative;
+	padding: 0px 2.5px;
+}
+.nav-list a:hover{
+	color: ;
+} 
+
+.nav-list a::before {
+	content: "";
+	display: block;
+	position:absolute;
+	left: 20%;
+    bottom: 0;
+    width: 0;
+    border-bottom: 2px solid #312658;
+}
+
+.nav-list a:hover::before {
+	width: 60%;
+}
+
+.fa-bars {
+	display: initial;
+	}
+
+.fa-bars, .fa-x {
+	font-size: clamp(15px,6vw, 25px);
+}
+/* Carousel slider */
+
+.cover-slider {
+	position: relative;
+	height: clamp(200px,40vw,650px);
+	line-height: 0px;
+}
+
+.cover-slider img {
+	height: 100%;
+	width: 100%;
+}
+
+.carousel-next-icons {
+	position:absolute;
+	z-index:2;
+	top:50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.carousel-next-icons > i {
+	color: white;
+	opacity:.2;
+	font-size: clamp(2rem, 6vw, 5rem);
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+.carousel-next-icons > i:hover {
+	opacity: .7;
+}
+
+.carousel-indicators {
+	position:absolute;
+	z-index:2;
+	top: 85%;
+	width: 100%;
+	display:flex;
+	justify-content: center;
+}
+
+.carousel-indicators > i {
+	color: white;
+	opacity: .3;
+	font-size: clamp(10px, 1.5vw, 15px);
+	padding: 2.5px;
+} 
+
+.carousel-indicators > i:first-child {
+	opacity: 1;
+} 
+
+/* Body styles */
+
+.section > div {
+	padding: 1rem 5%;
+}
+
+div.section > div:first-child {
+	background-color: #f0f2f7; 
+}
+
+div.section > div:nth-child(2) {
+	background-color: #FFCD07; 
+}
+
+.section h1 {
+	font-family: 'aktivgrotesk-bolduploadedfile', sans-serif;
+	font-style: bold; 
+	text-align: center;
+	font-size: clamp(1rem, 9vw,3rem);
+	letter-spacing: .2rem;
+	margin: .5rem;
+}
+
+.grid {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid > div {
+	max-width: 400px;
+	max-height: 300px;
+	padding: 5px 10px;
+} 
+
+.grid h2 {
+	font-family: 'aktivgrotesk-bolduploadedfile', sans-serif;
+	margin:5px 0;
+	letter-spacing: .07rem
+}
+
+.grid-image {
+	height: 100%; 
+	width:100%;
+}
+
+.link {
+	letter-spacing: .35rem;
+}
+
+.grid > div:nth-child(3) {
+	order: 4;
+} 
+
+.blog-post img {
+	border: 1px solid #312658;
+	border-radius: 5px;
+	height: clamp(175px,38vw,250px);
+	width: clamp(175px,38vw,250px);
+}
+
+.blog-post {
+	display:flex;
+	flex-flow: column nowrap;
+	width: 70%;
+	padding-top: 2rem;
+}
+
+.blog-post h3 {
+	font-family:'aktivgrotesk-bolduploadedfile', sans-serif;
+	font-size: clamp(1.5rem, 4.5vw,2rem);
+	margin-top: -8px;
+	margin-bottom: .5rem;
+}
+
+figure {
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+.blog-content figure{
+	float: left;
+}
+
+.blog-post a:hover {
+	opacity: .7;
+}
+
+.disabled {
+	pointer-events: none;
+}
+
+.post-info {
+	margin-top: 10px;
+}
+
+.post-info, .post-link {
+	color: #312658;
+}
+
+
+/* Footer Styles */
+
+.footer {
+	background-color: #f0f2f7;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	padding: 1rem 1rem;
+}
+
+#text-logo {
+	font-family:'aktivgrotesk-bolduploadedfile', sans-serif;
+	font-size: clamp(1rem, 8vw,2.5rem);
+	margin: .5rem 0rem;
+
+	padding: 0px;
+} 
+
+.footer h2 {
+	font-family:'aktivgrotesk-bolduploadedfile', sans-serif;
+	font-size: clamp(1.2rem, 4vw,2.5rem);
+	margin: .5rem 0rem;
+	margin-bottom: .8rem;
+	padding: 0px;
+}
+
+.footer p {
+	line-height: initial;
+}
+
+.apertura p:first-of-type {
+	margin-top:0px;
+}
+
+.indirizzo {
+	display: flex;
+}
+
+.indirizzo p {
+	margin:0px;
+}
+
+.footer-list {
+	list-style-type: none;
+	margin: 0 .5rem .5rem 0;
+	padding: 0px; 
+}
+
+.footer-list > li {
+	line-height: .8rem;
+	padding-top:4px;
+	padding-bottom: 4px;
+}
+
+.mobile {
+	display: initial;
+}
+
+.desktop{
+	display: none;
+}
+
+.icons {
+	text-align: right;
+	margin-top: 1rem;
+}
+
+.social-color-facebook {
+	color: #4862a3;
+	padding-right: 5px;
+}
+
+.social-color-instagram {
+	color: #d8226b;
+}
+
+.google-map {
+	color: #312658;
+}
+
+/* Single Page Styles */
+
+.gold {
+	background-color: gold;
+	height:clamp(25px,6vw, 50px);
+}
+
+.grey {
+	display: none;
+	background-color: #f0f2f7;
+	height:clamp(25px,6vw, 50px);
+}
+
+.banner {
+	background-image:url("/wp-content/themes/ASD-Sparta/img/warrior-black1.jpg");
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center; 
+	height: 40vw;
+}
+
+.post-container {
+	width: 70%;
+	padding: 1rem 5%;
+}
+
+.post-container h1 {
+	font-size: clamp(1.5rem, 9vw,4rem);
+	margin-bottom: .75rem;
+}
+
+.post-container a:hover {
+	opacity: .7;
+}
+
+/* Archive Page */
+
+.padding {
+	padding: 1rem 5%;
+}
+
+.archive-title {
+	font-size: clamp(1.2rem, 8vw,4rem);
+	margin-top: 2rem;
+}
+
+/* Palestra Page Styles */
+
+.palestra-page {
+	position: relative;
+}
+
+#palestra-background {
+	height: 25vw;
+	background-image: url("/wp-content/themes/ASD-Sparta/img/gym-floor.jpg");
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position:center;
+	filter: brightness(75%);
+}
+
+.palestra-page > h1 {
+	position: absolute;
+	top: 8%;
+	left: 8%;
+	color: white;
+	font-size: clamp(10px, 5vw,60px);
+	text-transform: uppercase;
+}
+
+.page-post-container {
+	width: 70%;
+	padding: 5% 10%;
+}
+
+.palestra-image-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	padding-bottom: 1rem;
+}
+
+.palestra-image-container > img {
+	width: 20vw;
+}
+
+/* Arte-Marziali Page Styles */
+
+.arte-marziali-page {
+	position: relative;
+}
+
+#arte-marziali-background {
+	height: 25vw;
+	background-image: url("/wp-content/themes/ASD-Sparta/img/martial-arts.jpg");
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position:center;
+	filter: brightness(75%);
+}
+
+.arte-marziali-page > h1 {
+	position: absolute;
+	top: 8%;
+	left: 8%;
+	color: white;
+	font-size: clamp(10px, 5vw,60px);
+	text-transform: uppercase;
+}
+
+/* Orari Page */
+
+.orari-heading {
+	font-family: 'aktivgrotesk-bolduploadedfile', sans-serif;
+	font-size:clamp(1.2rem, 8vw,4rem);
+}
+
+.wp-block-table {
+	width: 100%;
+	font-size: 1.75vw;
+	margin: 2rem auto;
+}
+table {
+	border: ridge;
+}
+
+.wp-block-table td {
+	border: none;
+	padding:.25em;
+}
+
+thead {
+	border-bottom: 1px solid!important ;
+}
+
+tbody td {
+	border-right: 1px solid!important;
+}
+
+tbody > tr td:first-child {
+	border-right: 1px solid;
+}
+
+
+/* News Page */
+
+.news-section >h1 {
+	font-family: 'aktivgrotesk-bolduploadedfile', sans-serif;
+	font-size: clamp(1.2rem, 8vw,4rem);
+
+}
+
+/* Styles for iPads */
+
+@media screen and (min-width: 500px) {
+	.footer-list > li {
+		padding-top: 9px;
+		padding-bottom:9px;
+	}
+}
+
+/* Styles for Desktop */ 
+
+@media screen and (min-width: 800px) {
+	p {
+		line-height: min(2rem, 3vw);
+	}
+
+	/* NAV Bar styles */
+
+	.navigation {
+		flex-direction: column;
+	}
+
+	nav {
+		display: flex;
+		justify-content: center;
+		width: 60%;
+	}
+
+	nav a {
+		font-size: 1.8rem;
+	}
+
+	.branding {
+		padding-bottom: 0;
+	}
+
+	.branding h1 {
+		margin-top: -30px;
+	}
+
+	.nav-list {
+		margin: 0;
+		padding: 0 0 12px 0;
+		line-height: initial;
+	}
+
+	.fa-bars {
+		display: none;
+	}
+
+	/* Body styles */
+
+	.carousel-indicators > i {
+		padding: 5px;
+	}
+
+	.section > div {
+	padding: 2rem 10%;
+	}
+
+	div.section > div:first-child {
+		padding: 2rem 10%;
+	}
+
+	.section h1 {
+		font-size: 3rem;
+		margin: 1rem;
+		margin-bottom: 3rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 400px 400px;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.grid h2 {
+		margin-top: 0px;
+		letter-spacing: .2rem;
+		font-size: 1.8rem;
+	}
+
+	.grid > div {
+		max-width: 550px;
+		max-height: 400px;
+		margin-bottom: 15px;
+	}
+
+	.grid > div:nth-child(3) {
+		order: 0;
+	} 
+
+	.blog-post {
+		display:flex;
+		flex-flow: row nowrap;
+		width: 70%;
+		padding-top: 2rem;
+	}
+
+	.blog-post h3 {
+		font-size: 2.3rem;
+	}
+
+	/* Footer Styles */
+
+	.footer {
+		display: flex;
+		flex-flow:row nowrap;
+		padding: 4rem 0 2rem 0;
+	}
+
+	.footer > div {
+		padding : 0 1.75rem;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	.desktop {
+		display: initial;
+	}
+
+	.footer-branding {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-start;
+	}
+
+	.icons {
+		margin: 0;
+		padding-top: 1rem;
+	}
+
+	/* Single page styles */
+
+	.gold {
+		display: none;
+	}
+
+	.banner {
+		background-image:url("/wp-content/themes/ASD-Sparta/img/warrior-black1.jpg");
+		background-size:contain;
+		background-repeat:repeat;
+		background-position:center; 
+		height: 400px;
+	}
+
+	.post-container {
+		width: 40%;
+		padding:2rem 0 2rem 8rem;
+	}
+
+	/* Archive page */
+
+	.padding {
+		padding: 2rem 10%;
+	}
+
+	/* Palestra page */
+
+	.page-post-container {
+		width: 70%;
+		padding: 2rem 10%;
+	}
+
+	/* Arte Marziali page */
+
+	 #arte-marziali-background > h1 {
+    	font-size: clamp(4rem,7vw,5rem);
+  	}
+}
+
